@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const pokemonList = [
     {
@@ -17,19 +17,25 @@ const pokemonList = [
 
   export default function PokemonCard() {
     //statement
-    //copie de pokemonList
-    const [pokemons, setPokemons] = useState({...pokemonList})
+   
     //comportement
 
     //render
     return (
-        pokemons[2].src ? ( <>
-            <figure>
-                <img src={pokemons[2].src} alt={pokemons[2].name} />
-                 <figcaption>{pokemons[2].name}</figcaption>
-            </figure>
-            </>) : ( <>
-                <p>???</p>
-                <p>{pokemons[2].name}</p>
-                </>) ) 
-                }
+      <> 
+     {pokemonList[1].src ? (
+         <>
+           <figure>
+               <img src={pokemonList[1].src} alt={pokemonList[1].name} />
+               <figcaption>{pokemonList[1].name}</figcaption>
+           </figure>
+         </>
+         ) : (
+           <div>
+             <p>???</p>
+             <p>{pokemonList[1].name}</p>
+           </div> )
+          }
+     
+       </>
+               );}
