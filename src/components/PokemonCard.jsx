@@ -17,8 +17,8 @@ const pokemonList = [
 
   export default function PokemonCard() {
     //statement
-    //copie de pokemonList dans un tableau
-    const [pokemons, setPokemons] = useState([...pokemonList])
+    //copie de pokemonList
+    const [pokemons, setPokemons] = useState({...pokemonList})
     //comportement
 
     //render
