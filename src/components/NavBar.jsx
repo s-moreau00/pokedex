@@ -1,10 +1,16 @@
 import React from 'react'
 
-export default function NavBar({pokemonIndex, suivant, precedent, pokemonList}) {
+export default function NavBar({setPokemonIndex, pokemonList}) {
+    //state
+    //comportement
+    //render
   return (
         <>
-            { pokemonIndex > 0 ? (<button onClick={precedent}>précèdent</button>) : (<></>)}
-            { pokemonIndex < pokemonList.length - 1 ? (<button onClick={suivant}>suivant</button>) : (<></>)}
+            {
+              pokemonList.map((pokemon,i)=> (
+                <button key={pokemon.name} onClick={() => setPokemonIndex(i)}>{pokemon.name}</button>
+              ))  
+            }
         </>
     )
 

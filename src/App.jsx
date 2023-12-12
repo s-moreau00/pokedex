@@ -33,18 +33,11 @@ const pokemonList = [
   //state
 const [pokemonIndex, setPokemonIndex] = useState(0);
   //comportements
-const precedent = () => {
-  if(pokemonIndex > 0)
-    setPokemonIndex(pokemonIndex - 1)
-}
-const suivant = () => {
- if(pokemonIndex < pokemonList.length - 1)
-  setPokemonIndex(pokemonIndex + 1)
-}
+
   //render
   return (
      <div>
-      <NavBar pokemonIndex={pokemonIndex} suivant={suivant} precedent={precedent} pokemonList={pokemonList}/>
+      <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList}/>
       <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
      </div>
   )
